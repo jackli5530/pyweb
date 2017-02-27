@@ -1,0 +1,42 @@
+<style>
+.bb{border:1px solid red;width:600px;margin:150px auto}
+.textcenter{text-align:center}
+.full{width:100%}
+div{line-height:40px}
+.greenspan{color:green}
+.redspan{color:red}
+</style>
+
+<form method="post">
+
+<div class="bb textcenter">
+
+  <div class="full">
+  用户登录
+  </div>
+  
+  <div class="full">
+  请输入用户名:<input type="text" name="txtUserName"/>
+  </div>
+  
+  <div class="full">
+  请输入密码:<input type="password" name="txtPassWord"/>
+  </div>
+  
+  <div class="full">
+  选择地区:<select type="text" name="userAres"/>
+    <option value="0">--请选择--</option>
+    {% for aa in Arase %}
+    <option value="{{aa.id}}">{{aa.name}}</option>
+    {% endfor %}
+    <select/>
+  </div>
+  
+  <div class="full">
+  <input type="submit" value="登录"/>
+  </div>
+
+</div>
+</form>
+
+{{result|safe}}
