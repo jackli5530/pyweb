@@ -18,8 +18,9 @@ from django.contrib import admin
 import myindex.bb
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^index', myindex.bb.hi),
-    url(r'^login', myindex.bb.login),
-    url(r'^unlogin', myindex.bb.unlogin),
+    #url(r'^admin/', admin.site.urls),
+    #url(r'^index', myindex.bb.hi),
+    #url(r'^login', myindex.bb.login),
+    #url(r'^unlogin', myindex.bb.unlogin),
+    url(r'^(\w+)/(\w*)$', myindex.bb.index),
 ]

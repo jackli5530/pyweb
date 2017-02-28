@@ -3,7 +3,21 @@ from django.shortcuts import render_to_response
 
 from UserClass import Userlgoin
 from django.http.response import HttpResponse
+from anaconda_navigator.utils.py3compat import request
 
+
+def index(request,c1,c2):
+    if c1=="index":
+        return hi(request)
+    if c1=="login":
+        return login(request)
+    packg=__import__("myindex")
+    pyfile=getattr(packg, "UserClass")
+    #pyfile.test()
+    getclass=getattr(pyfile,"Userlgoin")
+    uc=Userlgoin("jack","123")
+    uc.run()
+    return HttpResponse('404')
 
 def hi(request):
     dataset={"result":"","current":u"游客"}

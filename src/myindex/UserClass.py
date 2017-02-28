@@ -1,4 +1,6 @@
 #coding:utf-8
+def test():
+    print"test"
 class Userlgoin:
     username=""
     userpass=""
@@ -9,3 +11,6 @@ class Userlgoin:
         if self.username=="jack" and self.userpass=="123":
             return True
         return False
+    
+    def run(self):
+        print "run"
