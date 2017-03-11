@@ -15,12 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-import myindex.bb
+import myindex.main
 
 urlpatterns = [
     #url(r'^admin/', admin.site.urls),
-    #url(r'^index', myindex.bb.hi),
-    #url(r'^login', myindex.bb.login),
-    #url(r'^unlogin', myindex.bb.unlogin),
-    url(r'^(\w+)/(\w*)$', myindex.bb.index),
+    #url(r'^index', myindex.main.hi),
+    #url(r'^login', myindex.main.login),
+    #url(r'^unlogin', myindex.main.unlogin),
+    url(r'^(\w+)/(\w*)$', myindex.main.index),
 ]

@@ -1,0 +1,46 @@
+<style>
+.bb{border:1px solid red;width:600px;margin:150px auto}
+.textcenter{text-align:center}
+.full{width:100%}
+div{line-height:40px}
+.greenspan{color:green}
+.redspan{color:red}
+.redh4{color:red}
+</style>
+<html>
+<head>
+<title>注册页</title>
+</head>
+<body>
+ <div>
+<a href="/user/userlogin">返回登录</a>
+</div>
+  <form method="post">
+
+   <div class="bb textcenter">
+
+    <div class="full">
+  用户注册
+    </div>
+  
+    <div class="full">
+  请输入用户名:<input type="text" name="rename"/>
+    </div>
+  
+    <div class="full">
+  请输入密码:<input type="password" name="repass"/>
+    </div>
+  
+    <div class="full">
+        <input type="submit" value="注册"/>
+    </div>
+    <div class=full>
+    <span class=redspan>{{result|safe}}</span>
+    {% ifequal result "注册成功" %}
+    <a href="/user/userlogin">返回登录页</a>
+    {% endifequal %}
+    </div>
+   </div>
+ </form>
+</body>
+</html>

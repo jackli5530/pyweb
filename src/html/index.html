@@ -5,9 +5,9 @@
 <body>
  <div>这里是首页，当前用户是:<span style="color:green">{{current}}</span>
  {% ifequal current "游客" %}
- <a href="/login">登录</a>
+ <a href="/user/userlogin">登录</a>
  {% else %}
- <a href="/unlogin">安全退出</a>
+ <a href="/user/userunlogin">安全退出</a>
  {% endifequal %}
  </div>
 </body>
